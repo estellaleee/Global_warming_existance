@@ -1,3 +1,5 @@
+# All codes inspired by https://daisungjang.com/tutorial/Ngram_tutorial.html
+
 library(ngramr)
 
 start_year = 1998
@@ -49,10 +51,3 @@ data_long <- reshape(data,
                      direction = "long")
 
 write.csv(data, 'ngramm_data.csv')
-
-library(ggplot2)
-
-p <- ggplot(data_long, aes(x=Year, y=count, group=search_term))
-
-
-p +  geom_line(aes(colour = search_term))
